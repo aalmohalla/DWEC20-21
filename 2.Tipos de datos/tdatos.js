@@ -1,5 +1,17 @@
 //"use strict"
 
+// TIPO DE DATOS STRING
+
+let text = "Hola mundo¡";
+
+console.log(text);
+
+// Para evaluar una expresión utilizamos backticks y ${}
+
+console.log(`El texto de la variable text es ${text}`);
+
+
+
 //TIPO DE DATOS NUMBER
 
 let number = 5;
@@ -20,6 +32,14 @@ console.log(`El esultado de 2+2+NaN es ${2+2+NaN}`);
 console.log(`${9007199254740991 + 100}`)
 
 
+// TIPOS DE DATOS BOOLEANOS
 
-// TIPO DE DATOS STRING
+let isGreater = 4 > 1;
+
+console.log("¿4>1?: " + isGreater);
+
+let booleanZero = 0;
+
+console.log ("Valor de 0:" + Boolean(booleanZero));
+
 
