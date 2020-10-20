@@ -1,22 +1,49 @@
 "use strict";
-
+/*
 let calculator = {
-    x: 0,
-    y: 0,
-    read() {
-        this.x = prompt("Introduce el primer valor");
-        this.y = prompt("Introduce el segundo valor");
+    a:0,
+    b:0,
+    sum(){
+        return this.a + this.b;
     },
-    sum() {
-        return +this.x + +this.y;
+    mul(){
+        return this.a * this.b;
     },
-    mul() {
-        return this.x * this.y;
-    }
+    read(){
+        this.a = +prompt("Introduce el primer valor");
+        this.b = +prompt("Introduce el segundo valor");
 
+    }
+   
 
   };
-  
+  */
+
+  function Calculator() {
+  // this = {}
+    this.a = 0;
+    this.b = 0;
+    //a:0,
+    //b:0,
+
+    this.sum = function(){
+        return this.a + this.b;
+    };
+    
+    this.mul = function(){
+        return this.a * this.b;
+    };
+
+    this.read = function(){
+        this.a = +prompt("Introduce el primer valor");
+        this.b = +prompt("Introduce el segundo valor");
+
+    };
+// return this
+}
+
+  let calculator = new Calculator();
+  let calculator2 = new Calculator();
   calculator.read();
   alert( calculator.sum() );
   alert( calculator.mul() );
