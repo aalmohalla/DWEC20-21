@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+function Circulo(radio) {
+    this.radio=radio;
+    this.area = function() {
+        return (Math.PI * Math.pow(this.radio,2)).toFixed(2);
+    };
+    this.perimetro = function() {
+        return (2 * Math.PI * this.radio).toFixed(2);
+    }
+}
+
+let circulo1 = new Circulo(2); // 2 es el radio del círculo
+let circulo2 = new Circulo (7);
+alert("El area del circulo 1 es: " + circulo1.area() + "\n" +
+         "El area del circulo 2 es: " + circulo2.area());
+alert("El perímetro del circulo 1 es: " + circulo1.perimetro() + "\n" +
+         "El perímetro del circulo 2 es: " + circulo2.perimetro());
+</script>
+</html>

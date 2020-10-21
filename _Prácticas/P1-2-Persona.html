@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+function Caminante(nombre,apellido){
+    this.nombre=nombre;
+    this.apellido=apellido;
+    this.estado=false;
+    this.anda = function() {
+        this.estado=true;
+        return this;
+    };
+    this.para = function() {
+        this.estado = false;
+        return this;
+    };
+    this.getEstado = function() {
+        return this.estado?'Andando':'Parado';
+     };
+     this.getInfo = function() {
+        return `${this.nombre} ${this.apellido} esta ${this.getEstado()}`;
+     };
+ }
+
+
+
+let caminante = new Caminante("Jesus", "Calleja");
+caminante.anda();
+alert(caminante.getEstado()); // Andando;
+alert(caminante.para().getEstado()); // Parado
+alert(caminante.anda().getInfo()); // Jesus Calleja esta andando
+
+
+</script>
+</html>
