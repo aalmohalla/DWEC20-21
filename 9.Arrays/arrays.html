@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+"use strict";
+/*
+let styles = ["Jazz", "Blues"];
+styles.push("Rock-n-Roll");
+styles[Math.floor(styles.length/2)] = "Classics";
+styles[styles.length-1/2] = "Classics";
+alert(styles.shift());
+styles.unshift("Rap","Reggae");
+*/
+
+/*
+let arr = ["a", "b"];
+
+arr.push(function() {
+  alert( this );
+})
+
+arr[2](); 
+*/
+
+function sumInput() {
+    let resultado = 0;
+    let numerosEntrada = [];
+    let entrada = prompt("Introduce un valor numérico:");
+    
+    while (!isNaN(entrada) && entrada!="" && entrada!=null){
+        numerosEntrada.push(+entrada);
+        entrada = prompt("Introduce un valor numérico:");
+    }
+   
+    for (let numero of numerosEntrada) {
+        resultado += numero;
+    }
+    return resultado;
+}
+
+alert("El resultado es:" + sumInput());
+
+
+
+
+</script>
+</html>

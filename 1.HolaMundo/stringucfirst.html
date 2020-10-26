@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    "use strict";
+
+   /* function ucFirst(cadena) {
+        
+        if (cadena.length > 0) return cadena[0].toUpperCase() + cadena.slice(1);
+        return undefined;
+    }
+
+    ucFirst("john") == "John";*/
+
+    function checkSpam(cadena) {
+        let spam = {
+            0: "viagra",
+            1: "xxx",
+        };
+        for (let key in spam) {
+            if (cadena.toUpperCase().includes(spam[key].toUpperCase())) return true;
+        };
+        return false;
+
+    }
+    console.log(checkSpam('buy ViAgRA now'));
+    console.log(checkSpam('free xxxxx'));
+    console.log(checkSpam("innocent rabbit")); 
+
+</script>
+</html>
