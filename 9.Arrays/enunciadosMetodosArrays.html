@@ -42,36 +42,56 @@
     
     // Array.prototype.map()
     // 2. Array de inventores con first and last names
-console.dir(inventors.map(inventor => {
+
+    console.dir(inventors.map(inventor => {
                                       let nuevoInventor ={};
-                                      nuevoInventor.name = inventor.name;
+                                      nuevoInventor.first = inventor.first;
                                       nuevoInventor.last = inventor.last;
                                       return nuevoInventor;
 }));
-console.dir(inventors.map(inventor => {
+/*console.dir(inventors.map(inventor => {
                                       delete inventor.year;
                                       delete inventor.passed;
                                       return inventor;
-}));
+}));*/
 
-console.dir(inventors);
+
 
 
     // Array.prototype.sort()
     // 3. Ordena los inventores por fecha de nacimiento, de menor a mayor
 
+inventors.sort((inventorA,inventorB)=>{
+  return inventorA.year - inventorB.year; 
 
+})
+console.dir(inventors);
     
     // Array.prototype.reduce()
     // 4. Cuantos años vivieron entre todos los inventores?
 
-   
+   //Sin reduce
+   let añosVividos=0;
+
+   for (let inventor of inventors) {
+     añosVividos += inventor.passed - inventor.year;
+   }
+   console.log(añosVividos);
     
+   console.log(inventors.reduce((aniosVividos,inventor)=> {
+    return aniosVividos + inventor.passed-inventor.year;
+   },0));
 
     // 5. Ordena los inventores por años vividos. Añade un nuevo campo de edad a los objetos del array
     
-
-
+console.log(inventors.map((inventor)=>{
+  return {first: inventor.first,
+          last: inventor.last,
+          year: inventor.year,
+          passed: inventor.passed,
+          edad: inventor.passed-inventor.year
+  }
+}).sort((inventorA,inventorB)=>inventorA.edad - inventorB.edad));
    
    
      // 6. Ejercicio de ordenación
