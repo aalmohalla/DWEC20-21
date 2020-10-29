@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+/*
+    let array = [2,4,6];
+
+    array.forEach((elemento,indice,array) => {
+        alert("Elemento:" + elemento + "indice:" + indice + " en el array:" + array);
+    });
+*/
+
+let users = [
+  {id: 1, name: "Celina"},
+  {id: 3, name: "David"},
+  {id: 3, name: "Federico"}
+];
+
+let user = users.find(item => item.id == 3);
+
+alert(user.name + user.id); // Celina
+
+</script>
+</html>
