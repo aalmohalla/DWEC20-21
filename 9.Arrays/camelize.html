@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+function camelize(cadena) {
+
+    let palabrasCadena = cadena.split("-");
+    palabrasCadena = palabrasCadena.map((palabra,index) =>  index == 0?palabra:palabra[0].toUpperCase() + palabra.slice(1));
+    return palabrasCadena.join("");
+        
+    
+}
+
+alert(camelize("list-style-image"));
+alert(camelize("-webkit-transition"));
+
+
+</script>
+</html>
