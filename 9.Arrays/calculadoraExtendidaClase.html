@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+"use strict"
+
+function Calculator(){
+// this = {};
+    this["+"]= (a,b) => a+b;
+
+    this.addMethod = function (operando,funcion) {
+        this[operando] = funcion;
+    }
+
+    this.calculate = function(operacion){
+        let arrOperacion = operacion.split(" ");
+        let a = +arrOperacion[0];
+        let b = +arrOperacion[2];
+        let operando = arrOperacion[1];
+               
+        return this[operando](a,b);
+    }
+
+
+// return this;
+}
+
+let calc = new Calculator;
+
+alert( calc.calculate("3 + 7") ); // 10
+alert( calc.calculate("10 - 7") );
+let powerCalc = new Calculator;
+powerCalc.addMethod("*", (a, b) => a * b);
+powerCalc.addMethod("/", (a, b) => a / b);
+powerCalc.addMethod("**", (a, b) => a ** b);
+
+let result = powerCalc.calculate("2 ** 3");
+alert( result ); // 8
+
+</script>
+</html>

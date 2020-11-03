@@ -12,9 +12,9 @@
 
 function camelize(cadena) {
 
-    let palabrasCadena = cadena.split("-");
-    palabrasCadena = palabrasCadena.map((palabra,index) =>  index == 0?palabra:palabra[0].toUpperCase() + palabra.slice(1));
-    return palabrasCadena.join("");
+    return cadena.split("-")
+    .map((palabra,index) =>  index == 0?palabra:palabra[0].toUpperCase() + palabra.slice(1))
+    .join("");
         
     
 }
