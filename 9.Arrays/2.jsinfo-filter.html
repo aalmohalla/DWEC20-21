@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    'use strict';
+//Ejercici 1
+function filterRange(arr,min,max){
+    return arr.filter(number=> number>=min && number<=max);
+}
+
+    let arr = [5, 3, 8, 1];
+
+let filtered = filterRange(arr, 1, 4);
+
+alert( filtered ); // 3,1 (valores dentro del rango)
+
+alert( arr ); // 5,3,8,1 (array original no modificado)
+
+//Ejercicio2
+function filterRangeInPlace(arr, min, max) {
+    arr.forEach(element => {
+        if (element < min || element > min) {
+            arr.splice(arr.indexOf(element),1)
+        }
+    });
+}
+
+arr = [5, 3, 8, 1];
+
+filterRangeInPlace(arr, 1, 4); // remueve los números excepto aquellos entre 1 y 4
+
+alert( arr ); // [3, 1]
+
+
+//Ejercicio 3
+
+function copySorted(arr){
+    return arr.filter(item=>item).sort();
+}
+
+arr = ["HTML", "JavaScript", "CSS"];
+
+let sorted = copySorted(arr);
+
+alert( sorted ); // CSS, HTML, JavaScript
+alert( arr ); // HTML, JavaScript, CSS (sin cambios)
+</script>
+</html>
