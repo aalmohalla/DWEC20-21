@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+
+"use strict";
+
+
+let partida = {
+    
+    PC: 0,
+    
+    jugador:0,
+    
+    intentos:0,
+    
+    opciones: [
+    {nombre: "piedra",
+     gana: ["tijera"],
+     icono: "U+1F48E"},
+    {nombre: "papel",
+    gana: ["piedra"],
+     icono: "U+1F4F0"},
+    {nombre: "tijera",
+    gana: ["papel"],
+     icono: "U+2702"} ],
+     
+     getRandomOpcion: function(){
+        return this.opciones[(Math.round(Math.random()*2))];
+     },
+
+     getUserChoice: function(){
+        let opcion = " ";
+        do{
+            opcion = prompt("Elije piedra(0), papel(1) o tijera(3): ");
+        } while (opcion!=0 && opcion!=1 && opcion!=2);
+        return this.opciones[opcion];
+     },
+
+     //juega devuelve un valor positivo si gana el jugador, negativo si gana el PC y 0 si empatan
+     juega: function(){
+        let jugadorChoice= this.getUserChoice();
+        let PCChoice= this.getRandomOpcion();
+        this.intentos--;
+        if (jugadorChoice.gana.indexOf(PCChoice.nombre)) {
+            this.jugador++;
+            return 1;
+        } else if (PCChoice.gana.indexOf(jugadorChoice.nombre)) {
+                this.PC++;
+                return -1;
+            } else return 0;
+     }
+
+}
+let resultado = null;
+
+partida.intentos = prompt("Introduce el número de intentos para ganar");
+
+while ( true ) {
+
+    resultado = partida.juega();
+    if (resultado > 0) {
+        alert("Has ganado");
+    } else if(resultado < 0) {
+        alert ("Has perdido");
+    } else {
+        alert("Has empatado")
+    }
+
+    if (partida.intentos <=0) break;
+
+
+}
+
+
+</script>
+</html>

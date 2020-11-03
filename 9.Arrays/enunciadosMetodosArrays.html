@@ -102,54 +102,9 @@ console.log(inventors.map((inventor)=>{
     
     // 7. Ejercicio de reducción
     // Suma cada aparición de instancias en el siguiente array
-    const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ];
-/* resultado = {
-                car: 5,
-                truck:2,
-                walk:3,
-                }
-           
-}*/
-
-console.dir(data.reduce((objetoAcumulador,elemento)=>{
-  if (objetoAcumulador[elemento]) {
-    objetoAcumulador[elemento]++;
-  } else {
-    objetoAcumulador[elemento] = 1;
-  }
-  return objetoAcumulador;
-},{}));
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  console.dir(data.reduce((resultado,item)=>{
-    if (!resultado[item]){
-      resultado[item]=1;
-    } else {
-      resultado[item]++;
-    }
-    return resultado;
-    }
   
-  ,{}));
+
     
-
-
 
   </script>
 </body>
