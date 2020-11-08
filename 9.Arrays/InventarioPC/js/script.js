@@ -2,15 +2,17 @@
 
  let pcList = [];//array con el inventario de objetos PC
 
-//inicialización de las ventanas modales materialize CSS
-let modalWindow = M.Modal.init(document.querySelectorAll('.modal'),{dismissible: false})[0];
+
   
 //1. FUNCIÓN newPC: debe solicitar por pantalla los datos del PC, crear un objeto con dichos datos, y
-// almacenarlo en el array pcList. el objeto tndrá las propiedades name, memory, disk, os. Todas serán string
+// almacenarlo en el array pcList. el objeto tendrá las propiedades name, memory, disk, os. Todas serán string
 // menos os que sera boolean, false para Linux y true para Microsoft. El objeto se agregara al array pcList.
 
 function newPC(){
    //TU CÓDIGO AQUÍ
+
+
+
 
     listClear();
     printPC(document.querySelector("#usersList"));
@@ -31,7 +33,7 @@ function ramOrder() {
 
 }
 
-// Pide al usuario los GB de RAM con los que se van a ampliar todos los equipos inventariados
+// Pide al usuario los GB de RAM con los que se van a ampliar todos los equipos inventariados y lo actualiza
 function ramUpdate(){
 
   //TU CÓDIGO AQUÍ
@@ -58,6 +60,11 @@ function totalRAM(){
 
 }
 
+
+// FUNCIONES PARA LA VISTA, NO MODIFICAR NADA A PARTIR DE ESTE PUNTO
+
+//inicialización de las ventanas modales materialize CSS
+let modalWindow = M.Modal.init(document.querySelectorAll('.modal'),{dismissible: false})[0];
 
 //Evento de carga de usuarios  
 document.querySelector("#newPC").addEventListener("click",newPC);

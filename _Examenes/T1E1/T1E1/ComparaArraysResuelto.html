@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+
+    let arr1 = [3, "hola", 6 , true, null, "0"];
+    let arr2 = ["hola", "6", 0, null, true, 2];
+    let arr3 = [true, null, 6, "0", "hola", 3];
+    
+
+    alert( comparaArrays(arr1,arr2)); //false
+
+    alert (comparaArrays(arr1, arr3)); //true
+
+    alert (comparaArrays(arr2, arr3)); //false
+
+    alert (`Los arrays son: \n -Arr1 = ${arr1} \n -Arr2= ${arr2} \n -Arr3 = ${arr3} `)
+
+    // Nombre alumno:
+    // Apellido alumno:
+    // Implementa la función comparaArrays. La función recibira como parámetros dos arrays de elementos con tipos de datos básicos
+    // devolvera true si los dos arrays contienen los mismos elementos (valor y tipo de dato) sin necesidad de estar en el mismo orden.
+    // NO SE MODIFICARAN LOS ARRAYS PASADOS COMO PARÁMETROS A LA FUNCIÓN.
+    // TU CÓDIGO AQUÍ
+    function comparaArrays(arr1, arr2) {
+
+        if ( arr1.length != arr2.length) return false;
+       let arr1Ordenado = arr1.slice().sort();
+       let arr2Ordenado = arr2.slice().sort();
+
+        for (let i =0; i < arr1.length ; i++) {
+            if (!(arr1Ordenado[i] === arr2Ordenado[i])) return false
+        }        
+
+        return true;
+        };
+
+            
+        
+
+
+</script>
+</html>
