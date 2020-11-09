@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+    "use strict";
+
+    let userData = [];
+    let userInput = null;
+
+    do{
+        userInput = prompt("Introduce un dato");
+        if (userInput!=null && userInput!=""){
+            userData.push(userInput);
+        } else {
+            alert ("Entrada no válida");
+        }
+
+    }while(confirm ("¿Desea continuar introduciendo datos?"));
+
+    let numericArr = userData.filter(item=> !isNaN(item));
+    numericArr = numericArr.map(item=> +item);
+
+    alert (`REPORTE:
+            - Número de elementos totales: ${userData.length} \n
+            - Número de elemento numéricos: ${numericArr.length} \n
+            - Máximo valor numérico: ${Math.max(...numericArr)} \n
+            - Mínimo valor numérico: ${Math.min(...numericArr)} \n
+            - Media de los valores numéricos: ${(numericArr.reduce((acumulador,item)=>acumulador += item))/numericArr.length}
+
+    
+    `);
+
+</script>
+</html>

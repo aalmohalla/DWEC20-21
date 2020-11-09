@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+    "use strict";
+    
+   /* function comparaArrays(arr1,arr2){
+        if ( arr1.length != arr2.length) return false;
+        
+        let copiaArr1= arr1.slice().sort();
+        let copiaArr2= arr2.slice().sort();
+        for (let i=0; i< copiaArr1.length; i++){
+            if (copiaArr1[i]!==copiaArr2[i]) return false;
+        }
+        return true;
+
+    }*/
+
+    //devuelve true si los arrays contienen los mismos elementos del mismo tipo, aunque esten desordenados
+    function comparaArrays(arr1,arr2){
+        if ( arr1.length != arr2.length) return false;
+        
+        let copiaArr2 = arr2.slice(); //copia de array para no modificar los originales
+        //elimina los arrys de copiaArr2.....
+        for (let elemArr1 of arr1){
+
+            if (copiaArr2.includes(elemArr1)){
+                copiaArr2.splice(copiaArr2.indexOf(elemArr1),1);
+            } else {
+                return false;
+            }
+        }
+        return true;
+      
+
+    }
+    
+    let arr1 = [3, "hola", 6 , true, null, "0"];
+    let arr2 = ["hola", "6", 0, null, true, 2];
+    let arr3 = [true, null, 6, "0", "hola", 3];
+    
+
+
+    alert( comparaArrays(arr1,arr2)); //false
+
+    alert (comparaArrays(arr1, arr3)); //true
+
+    alert (comparaArrays(arr2, arr3)); //false
+
+    alert (`Los arrays tras las comparaciones son: \n -Arr1 = ${arr1} \n -Arr2= ${arr2} \n -Arr3 = ${arr3} `)
+
+    // Nombre alumno:
+    // Apellido alumno:
+    // Implementa la función comparaArrays. La función recibira como parámetros dos arrays de elementos con tipos de datos básicos.
+    // Devolvera true si los dos arrays contienen los mismos elementos (valor y tipo de dato) sin necesidad de estar en el mismo orden.
+    // NO SE MODIFICARAN LOS ARRAYS PASADOS COMO PARÁMETROS A LA FUNCIÓN.
+    
+    
+    // TU CÓDIGO AQUÍ
+    
+</script>
+</html>
