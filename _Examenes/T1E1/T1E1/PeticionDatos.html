@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+/*La aplicación solicitará una entrada, y sin importar su valor o tipo, lo almacenará mientras no sea cadena vacia o null. A continuación, preguntara si desea introducir un nuevo dato. Si se acepta, se solicitará una nueva entrada, si se cancela se mostrará un reporte mediante Alert con:
+-	Nº total de entradas.
+-	Nº de entradas que han sido numéricas.
+-	El máximo valor numérico introducido.
+-	El mínimo valor numérico introducido.
+-	La media de los valores numéricos.
+Nota 1: debe utilizarse el método filter para obtener el array de valores numéricos a partir del array de entrada.
+Nota 2: Los máximos y mínimos pueden calcularse mediante las funciones max y min del objeto Math, junto con el operador de desestructuración spread.
+*/
+
+"user strict";
+
+let userInputCollection = [];
+let userInput = "";
+
+do{
+    userInput = prompt("Introduce cualquier valor: ");
+    if(userInput!=null) userInputCollection.push(userInput);
+}while (confirm("¿Desea introducir más datos?"));
+
+let userColletctionNumberFiltered = userInputCollection.filter(item => !isNaN(parseInt(item)));
+
+alert(` Nº Total de entradas: ${userInput.length} \n
+        Nº de entradas numéricas: ${userColletctionNumberFiltered.length} \n
+        Máximo valor numérico introducido: ${Math.max(...userColletctionNumberFiltered)} \n
+        Mínimo valor numérico introducido: ${Math.min(...userColletctionNumberFiltered)} \n
+        Media valores numérico introducido: ${mediaArray(userInputCollection)} \n
+
+        
+        `)
+
+
+
+        function mediaArray(arr){
+            let numberArray = arr.filter(item => !isNaN(parseInt(item)));
+            return numberArray.reduce((sumatotal,elemento)=> sumatotal+= +elemento , 0) / numberArray.length;
+        }
+
+</script>
+</html>
