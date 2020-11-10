@@ -29,6 +29,9 @@ function nameOrder(){
 function ramOrder() {
   //TU CÓDIGO AQUÍ
 
+
+  listClear();
+  printPC(document.querySelector("#usersList"));
 }
 
 // Pide al usuario los GB de RAM con los que se van a ampliar todos los equipos inventariados
