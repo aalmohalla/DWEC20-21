@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+"use strict";
+
+
+function getRandom(min,max){
+    return (Math.random()*(max-min)+min).toFixed(0);
+}
+
+const MIN = 1;
+const MAX = 16;
+const RANDOMNUMBER = getRandom(MIN,MAX);
+const MAXUSERTRIES = 3;
+let userTries = 0;
+let userNumber = null;
+
+do{
+    userNumber = prompt(`Introduce un número entre ¨${MIN} y ${MAX}`);
+    if ( isNaN(userNumber) || userNumber < MIN || userNumber > MAX) {
+        alert (`Entrada no válida: introduce un número entre ¨${MIN} y ${MAX}`);
+    } else {
+        userTries++;
+        if (userNumber > RANDOMNUMBER) {
+            alert ("El número introducido es mayor que el que debes adivinar");
+        } else {
+            if (userNumber < RANDOMNUMBER){
+                alert ("El número introducido es menor que el que debes adivinar");
+            } else {
+                alert (`FELICIDADES¡ HAS ACERTADO EN ${userTries} INTENTOS`);
+            }
+        }
+    }
+
+}while(userNumber != RANDOMNUMBER && userTries < MAXUSERTRIES);
+
+if (userNumber != RANDOMNUMBER) {
+    alert (`LO SIENTO, NO HAS ACERTADO, EL NÚMERO ERA ${RANDOMNUMBER}`); 
+}
+
+
+
+
+
+</script>
+</html>
