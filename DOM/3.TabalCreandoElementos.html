@@ -26,26 +26,26 @@
 
 
 <script>
-    
+    "use strict";
     let table = document.createElement("table");
     document.body.append(table);
 
 
     let filas = prompt("Introduce el número de filas");
     let columnas = prompt("Introduce el número de columnas");
-    let fila, columna;
+   
 
     for (let i =0; i<filas; i++) {
-        fila = document.createElement("tr");
+        let fila = document.createElement("tr");
         table.append(fila);
         for (let j=0; j<columnas; j++){
-            columna = document.createElement("td");
+            let columna = document.createElement("td");
             columna.textContent = i +":" + j;
             fila.append(columna);
         }
 
     }
-    
+   
     // your code
   </script>
 </html>
