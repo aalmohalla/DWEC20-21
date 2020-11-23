@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .alert {
+          padding: 15px;
+          border: 1px solid #d6e9c6;
+          border-radius: 4px;
+          color: #3c763d;
+          background-color: #dff0d8;
+        }
+        </style>
+        
+       <div class="alert">
+          <strong>Hi there!</strong> You've read an important message.
+        </div>
+
+        <script>
+            let mensaje=document.createElement("div");
+            mensaje.innerHTML = " <strong>Creando objetos desde JS</strong> Mi primer elemento creado con document.createElement"
+            mensaje.classList.add("alert");
+            setTimeout( ()=>document.body.append(mensaje),6000);
+        </script>
+</body>
+</html>

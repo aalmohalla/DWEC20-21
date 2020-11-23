@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input>
+
+<script>
+  let input = document.querySelector('input');
+
+  // atributo => propiedad
+  input.setAttribute('value', 'text');
+  alert(input.value); // text
+
+  // NO propiedad => atributo
+  input.value = 'newValue';
+  alert(input.getAttribute('value')); // text (¡no actualizado!)
+</script>
+</body>
+</html>
