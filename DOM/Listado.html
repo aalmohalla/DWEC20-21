@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+    <script>
+
+    function createTree(container,data){
+        let listado = document.createElement("ul");
+        container.append(listado);
+        for (let elem in data){
+            if (typeof(elem)==) {
+                createTree(listado,elem);
+            }else {
+                listado.append(document.createElement("li").textContent=elem)
+            }
+        }
+
+    }
+
+
+    let data = {
+        "Fish": {
+          "trout": {},
+          "salmon": {}
+        },
+      
+        "Tree": {
+          "Huge": {
+            "sequoia": {},
+            "oak": {}
+          },
+          "Flowering": {
+            "apple tree": {},
+            "magnolia": {}
+          }
+        }
+      }
+
+      createTree(document.body,data);
+
+
+    </script>
+</body>
+</html>
