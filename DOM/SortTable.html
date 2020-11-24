@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tbody>
+            <thead>
+                <td>Alumno</td>
+                <td>Nota</td>
+            </thead>
+            <tr>
+                <td>A1</td>
+                <td>9</td>
+            </tr>
+            <tr>
+                <td>A2</td>
+                <td>7</td>
+            </tr>
+            <tr>
+                <td>A3</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>A4</td>
+                <td>6</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+<script>
+    let table = document.querySelector("table");
+
+    function sortTable(table,fil,col,asc){
+
+        let filas = table.getElementsByTagName("tr");
+        let iteraciones = filas.length - fil;
+        let ordenado = false;
+        if (asc){
+        while ( !ordenado && iteraciones > 0) {
+        ordenado = true;
+        for (let i=fil; i<filas.length-1; i++){
+             if (table.rows[i].cells[col].textContent < table.rows[i+1].cells[col].textContent) {
+                filas[i].before(filas[i+1]);
+                ordenado = false;
+            }
+        }
+        iteraciones--;
+        }
+        } else {
+            while ( !ordenado && iteraciones > 0) {
+            ordenado = true;
+            for (let i=fil; i<filas.length-1; i++){
+             if (table.rows[i].cells[col].textContent > table.rows[i+1].cells[col].textContent) {
+                filas[i].before(filas[i+1]);
+                ordenado=false;
+            }
+            iteraciones--;
+        }
+        }
+        }
+        
+    }        
+        
+        
+ sortTable(table,1,1,false);
+
+</script>
+</html>
