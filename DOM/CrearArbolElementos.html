@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <div id='container'></div> 
+</body>
+
+<script>
+
+
+let data = {
+  "Fish": {
+    "trout": {},
+    "salmon": {}
+  },
+
+  "Tree": {
+    "Huge": {
+      "sequoia": {},
+      "oak": {}
+    },
+    "Flowering": {
+      "apple tree": {},
+      "magnolia": {}
+    }
+  }
+};
+
+function isEmpty(objeto) {
+    for (let elemento in objeto){
+        return false;
+    }
+    return true;
+}
+function createTree(container,data){
+    if (isEmpty(data)) return false; // si el objeto esta vacio terminamos
+    let lista = document.createElement('ul');
+    container.append(lista);
+   
+    for (let elemento in data) {
+        let nuevoElemento = document.createElement('li');
+        nuevoElemento.textContent = elemento;
+        lista.append(nuevoElemento);
+        if (!isEmpty(elemento)) createTree(lista,data[elemento]);
+    }
+
+}
+
+
+let container = document.getElementById('container');
+createTree(container, data); // creates the tree in the container
+</script>
+</html>
