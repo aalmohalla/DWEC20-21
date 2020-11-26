@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<input id=botonOscurecer type="button" value="oscurecer fondo">
+<input id=botonAclarar type="button" value="aclarar fondo">
+<style>
+body{
+    background-color: white;
+}
+
+</style>
+
+</body>
+
+<script>
+    document.querySelector("#botonOscurecer").addEventListener("click", ()=>{
+        let estilopagina = getComputedStyle(document.body);
+        let color = estilopagina.backgroundColor.match(/(\d{1,3}), (\d{1,3}), (\d{1,3})/g)[0].split(",");
+        color = color.map((elem)=>+elem-15);
+        color = color.join(",");
+        document.body.style.backgroundColor = "rgb(" + color +")";
+
+    })
+
+
+    document.querySelector("#botonAclarar").addEventListener("click", ()=>{
+        let estilopagina = getComputedStyle(document.body);
+        let color = estilopagina.backgroundColor.match(/(\d{1,3}), (\d{1,3}), (\d{1,3})/g)[0].split(",");
+        color = color.map((elem)=>+elem+15);
+        color = color.join(",");
+        document.body.style.backgroundColor = "rgb(" + color +")";
+
+    })
+
+
+</script>
+</html>
