@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    table, td, th{
+        
+        border: 1px solid black;
+    }
+    table {
+        border-collapse: collapse;
+    }
+    th {
+        background-color: grey;
+    }
+    
+    </style>
+</head>
+<body>
+ <div></div>
+  <script>
+     "use strict";
+    
+     function getTr(celdas){
+        let tr = document.createElement("tr");
+        for (let i=0; i<celdas; i++){
+            let td = document.createElement("td");
+            tr.append(td);
+        }
+        return tr;
+    }
+
+    function getSpainDay(date){
+        let day = date.getDay();
+        if (day == 0) return 6;
+        return day-1;
+    }
+
+    function createCalendar(elem,year,month){
+
+        let currentDay = new Date(year,month-1); //día actual a incluir en el calendario, comenzando por el día uno del mes indicado
+        let lastDay = new Date(year,month,0);
+        let table = document.createElement("table"); //creamos la tabla
+        let row = document.createElement("tr"); 
+        row.innerHTML = "<th>Lunes</th><th>Martes</th><th>Miercoles</th><th>Jueves</th><th>Viernes</th><th>Sabado</th><th>Domingo</th>"; //fila de cabecera
+        table.append(row);
+
+        let fullRow=true; //fila llena? se crea una nueva fila, inicialmente es true para crear la primera fila de la tabla
+        let weekDay;
+        while( currentDay <= lastDay){
+            if (fullRow){
+                row = getTr(7);
+                fullRow = false;
+            }
+            weekDay = getSpainDay(currentDay);
+            row.cells[weekDay].textContent = currentDay.getDate();
+            if (weekDay == 6 || currentDay.getDate() == lastDay.getDate()) {
+                fullRow = true;
+                table.append(row);
+            }
+            currentDay.setDate(currentDay.getDate()+1);
+        }
+        elem.append(table);
+    }
+
+     createCalendar(document.querySelector("div"), 2020,11);
+
+
+
+
+
+  </script>
+</body>
+</html>
