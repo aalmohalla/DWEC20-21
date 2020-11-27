@@ -16,8 +16,8 @@
       let notificacion = document.createElement("div");
       notificacion.classList.add(className,"notification");
    
-      notificacion.style.top="0px";
-      notificacion.style.right="0px";
+      notificacion.style.top=top+"px";
+      notificacion.style.right=right+"px";
       notificacion.textContent = html;
       document.body.append(notificacion);
       setTimeout(()=>notificacion.remove(),1500);
