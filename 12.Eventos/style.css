@@ -1,0 +1,7 @@
+.cajacoordenadas{
+    position:fixed;
+    left: 0px;
+    top: 0px;
+    background-color: white;
+    transition: 2s;
+}

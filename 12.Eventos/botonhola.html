@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id = "coordenadas" class="cajacoordenadas">
+    <ul>
+        <li id = "cX"></li>
+        <li id = "cY"></li>
+    </ul>
+  </div>
+</body>
+<script>
+  /*  document.querySelector("#botonHola").addEventListener("click",(e)=>{
+         alert("hola");
+         console.dir(e);
+    });*/
+    
+    window.addEventListener("mousemove",(e)=>{
+        document.querySelector("#cX").textContent=e.clientX;
+        document.querySelector("#cY").textContent=e.clientY;
+    })
+
+    window.addEventListener("click", (e)=>{
+        let cajacoordenadas=document.querySelector("#coordenadas");
+        cajacoordenadas.style.left=e.clientX +"px";
+        cajacoordenadas.style.top=e.clientY+"px";
+        cajacoordenadas.style.backgroundColor = "red";
+    })
+</script>
+</html>
