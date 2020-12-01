@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="Calendario"></div>
+
+    
+
+</body>
+<script>
+    
+    function getSpainDay(date){
+        if (date.getDay() == 0) return 6;
+        return date.getDay()-1;
+   }
+    
+    function calendar(year,month,dom){
+        let table = document.createElement("table");
+        table.innerHTML = "<tbody>  <tr> <th>Lunes</th> <th>Martes</th> <th>Miercoles</th> <th>Jueves</th> <th>Viernes</th> <th>Sabado</th> <th>Domingo</th> </tr> </tbody>";
+        table.setAttribute("border","1px");
+        dom.append(table);
+
+        let date = new Date(year,month-1);
+        let lastDate = new Date(year,month,0);
+        let row;
+        let fullWeek = true;
+        do{
+            if (fullWeek){
+                row = document.createElement("tr");
+                row.innerHTML = "<td></td><td></td><td></td><td></td><td></td><td></td><td></td>"
+                fullWeek=false;
+            }
+            row.cells[getSpainDay(date)].textContent = date.getDate();
+            if (getSpainDay(date)==6 || +date == +lastDate){
+                fullWeek = true;
+                table.append(row);
+            }
+
+
+            console.log(date);
+            date.setDate(date.getDate()+1);
+         
+
+        }while (date <= lastDate)
+
+
+
+
+    }
+
+
+    calendar(2020,11,document.querySelector("#Calendario"));
+</script>
+</html>
