@@ -7,14 +7,40 @@
     <link rel="stylesheet" href="entradaDatos.css">
 </head>
 <body>
-    <div>
-        <form>
-            <label for="fname">Name:</label>
-            <input type="text" id="fname" name="fname"><br>
-            <label for="ldescripcion">Descripción:</label>
-            <input type="text" id="tdescripcion" name="tdescripcion">
-        </form>
+ 
+        <div class="product-form">
+            <label>Nombre:</label>
+            <input type="text" id="inputFieldName" name="nombre" placeholder="Product Name" class="product-form__input" size="50">
+            <label>Precio:</label>
+             <input type="text" id="inputfieldPrice" name="precio" placeholder="Price" class="product-form__input" size="50">
+            <label>Descripción:</label>
+            <textarea id="inputfieldDescription" name="descripcion" rows="4" cols="52" class="product-form__input">
+              
+            </textarea>
+            
+            <button id="addButton" class="product-form__btn">Añadir</button></div>
+        </div>
 
-    </div>
+        <div class="display-product">
+            
+            <div id="producto" class="product-profile">
+                <h2 class="fullname">Nombre</h2>
+                <p>Descripcion Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae hic est aspernatur inventore doloremque, asperiores nisi omnis laboriosam minus. Iure numquam adipisci reiciendis laudantium blanditiis, in nobis dignissimos corporis quam.</p>
+                <h3>Precio:</h3>
+            </div>
+            <div id="producto" class="product-profile">
+                <h2 class="fullname">Nombre</h2>
+                <p>Descripcion Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae hic est aspernatur inventore doloremque, asperiores nisi omnis laboriosam minus. Iure numquam adipisci reiciendis laudantium blanditiis, in nobis dignissimos corporis quam.</p>
+                <h3>Precio:</h3>
+            </div>
+            <div id="producto" class="product-profile">
+                <h2 class="fullname">Nombre</h2>
+                <p>Descripcion Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae hic est aspernatur inventore doloremque, asperiores nisi omnis laboriosam minus. Iure numquam adipisci reiciendis laudantium blanditiis, in nobis dignissimos corporis quam.</p>
+                <h3>Precio:</h3>
+            </div>
+
+
+        </div>
 </body>
+<script src="entradaDatos.js"></script>
 </html>
