@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <style>
+    #field {
+      width: 200px;
+      height: 150px;
+      border: 10px solid black;
+      background-color: #00FF00;
+      overflow: hidden;
+    }
+    #ball {
+        position:absolute;
+        transition: 2s;
+    }
+  </style>
+</head>
+
+<body style="height:2000px">
+
+  Haz click en un lugar del campo para mover el balón allí.
+  <br> El balón nunca debe abandonar el campo.
+
+
+  <div id="field">
+    <img src="https://en.js.cx/clipart/ball.svg" id="ball"> . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+  </div>
+
+
+
+</body>
+<script>
+
+    document.querySelector("#field").addEventListener('click',(event)=>{
+        let x = event.clientX;
+        let y = event.clientY;
+        let balon = document.querySelector('#ball');
+        console.log(x);
+        console.log(y);
+        let campo = document.querySelector('#field');
+        let newcoordX = x - campo.offsetLeft - campo.clientLeft - balon.clientWidth/2;
+        let newcoordY = y - campo.offsetTop - campo.clientTop - balon.clientHeight/2 ;
+        console.log(newcoordX);
+        if (newcoordX < 0) newcoordX = 0;
+        if (newcoordX > campo.clientWidth-balon.clientWidth) newcoordX = campo.clientWidth-balon.clientWidth;
+        balon.style.marginLeft=newcoordX+'px';
+        
+        if (newcoordY < 0) newcoordY = 0;
+        if (newcoordY > campo.clientHeight-balon.clientHeight) newcoordY = campo.clientHeight-balon.clientHeight;
+        
+        balon.style.marginTop=newcoordY +"px";
+
+
+    })
+</script>
+
+</html>
