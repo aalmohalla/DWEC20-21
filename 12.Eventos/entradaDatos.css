@@ -2,8 +2,6 @@ html {
     font-family: Arial, Helvetica, sans-serif;
 }
   
-  
-
   button {
     cursor: pointer;
   }
@@ -20,6 +18,7 @@ html {
     border: solid 2px;
     border-radius: 12px;
     background-color: white;
+    margin-bottom: 20px;
     
 }  
     label {
@@ -40,7 +39,8 @@ html {
     .display-product{
         border: solid 2px;
         border-radius: 12px;
-        background-color: rgb(216, 246, 247)
+        background-color: rgb(216, 246, 247);
+      
     }
     .product-profile {
         margin: 1em;
