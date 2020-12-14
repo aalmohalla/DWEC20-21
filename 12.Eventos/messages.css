@@ -18,7 +18,10 @@ body {
     background: #edf5e1;
     padding: 10px 20px 10px;
     border-top: solid 2px #c4df9b;
+<<<<<<< HEAD
+=======
     position: relative;
+>>>>>>> c1b70904b5f17ec1fb8f151d601e6c8feef31436
   }
   
   .remove-button {
@@ -30,5 +33,8 @@ body {
     border: none;
     background: transparent;
     cursor: pointer;
+<<<<<<< HEAD
+=======
     position: absolute;
+>>>>>>> c1b70904b5f17ec1fb8f151d601e6c8feef31436
   }
