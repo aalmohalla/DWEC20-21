@@ -1,0 +1,21 @@
+
+#imgContenedor{
+    alt: 250px;
+}
+.imagen{
+    height: 350px;
+}
+
+#listadoImagenes > li {
+    display: inline-block;
+    
+}
+
+#listadoImagenes {
+    width: 15000px;
+}
+
+#imgContenedor {
+    width: 645px;
+    overflow: hidden;
+}

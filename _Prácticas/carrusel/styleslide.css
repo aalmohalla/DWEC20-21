@@ -1,0 +1,12 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#mascara{
+    width: 500px;
+    height: 257px;
+    overflow: hidden;
+}
+.slide{
+    float: left;
+}
