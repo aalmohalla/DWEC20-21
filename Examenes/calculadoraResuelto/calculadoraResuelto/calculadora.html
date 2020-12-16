@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="calculadora.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+<div class="wrapper">
+    <div id = "Principal" class="one">  
+      <div id= "Calculadora">         
+         <input id="Pantalla" type="textbox" class="textbox" readonly>
+        <div id= "Teclado" class="buttons">
+          <button class="button" value="AC">AC</button>
+          <button class="button" value="CE">CE</button>
+          <button class="button" value="%">%</button>
+          <button class="button" value="/">/</button><br>
+          <button class="button" value="7">7</button>
+          <button class="button" value="8">8</button>
+          <button class="button" value="9">9</button>
+          <button class="button" value="*">*</button><br>
+          <button class="button" value="4">4</button>
+          <button class="button" value="5">5</button>
+          <button class="button" value="6">6</button>
+          <button class="button" value="-">-</button><br>
+          <button class="button" value="1">1</button>
+          <button class="button" value="2">2</button>
+          <button class="button" value="3">3</button>
+          <button class="button" value="+">+</button><br>
+          <button class="button" value=".">.</button>
+          <button class="button" value="0">0</button>
+          <button class="button" value="Ans">Ans</button>
+          <button class="button" value="=">=</button>
+        </div>
+      </div>
+      
+     </div>   
+     <div id="historial" class="two">
+      <div class="table-title">
+        <p id="titulo">HISTORIAL</p>
+        </div>
+        <table class="table-fill">
+        <thead>
+        <tr>
+        <th class="text-left">Operación</th>
+        <th class="text-left">Acción</th>
+        </tr>
+        </thead>
+        <tbody class="table-hover">
+        
+        </tbody>
+        </table>
+    </div>
+  </div>
+</body>
+</html>

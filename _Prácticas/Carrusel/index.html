@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria de imágenes</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+
+
+  
+<input type="file" >
+<img id="imagen" width="120px">
+
+<script>
+
+let inputFile = document.querySelector("input");
+inputFile.addEventListener("change", readFile);
+
+function readFile(event) {
+  let input = event.target;
+  console.dir(input);
+  let file = input.files[0];
+
+  let reader = new FileReader();
+
+  reader.readAsDataURL(file);
+  
+  reader.onload = function() {
+    console.log(this.result);
+    document.querySelector("#imagen").src=reader.result;
+    
+  };
+
+  reader.onerror = function() {
+    console.log(reader.error);
+  };
+
+}
+</script>
+
+<!-- Flechas para la galeria-->
+<a href="#" class="demo-arrow-cls back">« Back</a>
+<a href="#" class="demo-arrow-cls forward">Forward » </a>
+
+</body>
+</html>

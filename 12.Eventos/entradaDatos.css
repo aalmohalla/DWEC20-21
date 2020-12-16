@@ -1,6 +1,63 @@
-
-input{
-    position: absolute;
-    left: 110px;
-           
+html {
+    font-family: Arial, Helvetica, sans-serif;
 }
+  
+  button {
+    cursor: pointer;
+  }
+  
+
+
+  .product-form {
+    position: sticky;
+    top: 10px;
+    z-index: 1000;
+    border: 1px solid gray;
+    padding: 2rem;
+   
+    border: solid 2px;
+    border-radius: 12px;
+    background-color: white;
+    margin-bottom: 20px;
+    
+}  
+    label {
+      display: block;
+      padding-bottom: 0.3rem;
+    }
+
+    .product-form__btn {
+        background: #6ab0af;
+        border: 0;
+        color: #ffffff;
+        display: block;
+        margin-top: 20px;
+        
+    }
+
+
+    .display-product{
+        border: solid 2px;
+        border-radius: 12px;
+        background-color: rgb(216, 246, 247);
+      
+    }
+    .product-profile {
+        margin: 1em;
+        width: 17em; 
+        height: 12em;
+        background: #fff;
+        border: solid black;
+        border-radius:  .3em;
+        display: inline-grid;
+        position:relative;
+        overflow: auto;
+      }
+      #producto .fullname {
+        margin: auto;
+        color: #16a085;
+        font-size: 1.53em;
+        font-family: "Coda", sans-serif;
+        font-weight: bold;
+      }
+    
