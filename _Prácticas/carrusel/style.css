@@ -1,21 +1,111 @@
 
-#imgContenedor{
-    alt: 250px;
-}
-.imagen{
-    height: 350px;
-}
-
-#listadoImagenes > li {
-    display: inline-block;
+  .demo-arrow-cls {
+    position: absolute;
+    top: 120px;
+    padding: 0;
     
-}
+    display: block;
+        
+  
+    width: 60px;
+    height: 60px;
+    background: transparent;
+    text-indent: -9999px;
+    border-top: 1px solid #408080;
+    border-left: 1px solid #72B8B8;
+    transition: all .3s ease-in-out;
+    text-decoration: none;
+    color: transparent;
+  }
+  .demo-arrow-cls:hover {
+    border-color: #800000;
+    border-width: 2px;
+  }
+  .demo-arrow-cls:before {
+    display: block;
+    height: 200%;
+    width: 200%;
+    margin-left: -50%;
+    margin-top: -50%;
+    content: "";
+    transform: rotate(45deg);
+  }
+  .demo-arrow-cls.back {
+    transform: rotate(-45deg);
+    left: 0;
+  }
+  .demo-arrow-cls.forward {
+    transform: rotate(140deg);
+    right: 0;
+  }
 
-#listadoImagenes {
-    width: 15000px;
-}
-
-#imgContenedor {
-    width: 645px;
+  body {
+    padding: 10px;
+  }
+  
+  .carousel {
+    position: relative;
+    width: 368px;
+    padding: 10px 40px;
+    border: 1px solid #CCC;
+    border-radius: 15px;
+    background: #eee;
+  }
+  
+  .carousel img {
+    width: 300px;
+    height: 160px;
+    /* make it block to remove space around images */
+    display: block;
+  }
+  
+  .arrow {
+    position: absolute;
+    top: 60px;
+    padding: 0;
+    background: #ddd;
+    border-radius: 15px;
+    border: 1px solid gray;
+    font-size: 24px;
+    line-height: 24px;
+    color: #444;
+    display: block;
+  }
+  
+  .arrow:focus {
+    outline: none;
+  }
+  
+  .arrow:hover {
+    background: #ccc;
+    cursor: pointer;
+  }
+  
+  .prev {
+    left: 7px;
+  }
+  
+  .next {
+    right: 7px;
+  }
+  
+  .gallery {
+    width: 390px;
     overflow: hidden;
-}
+  }
+  
+  .gallery ul {
+    height: 130px;
+    width: 9999px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    transition: margin-left 250ms;
+    /* remove white-space between inline-block'ed li */
+    /* http://davidwalsh.name/remove-whitespace-inline-block */
+    font-size: 0;
+  }
+  
+  .gallery li {
+    display: inline-block;
+  }
