@@ -13,11 +13,8 @@ function readFile(event) {
   
   reader.onload = function() {
     console.log(this.result);
-    let carrusel = document.querySelector("#imagenes");
-    let image = document.createElement("img");
-    image.classList.add("slide");
-    image.src=reader.result;
-    carrusel.append(image);
+    let carrusel = document.querySelector(".images");
+    carrusel.insertAdjacentHTML("beforeend", `<li><img src=${this.result} class="slide"></li>`);
     
   };
 

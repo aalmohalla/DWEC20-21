@@ -1,7 +1,7 @@
 
   .demo-arrow-cls {
     position: absolute;
-    top: 120px;
+    top: 180px;
     padding: 0;
     
     display: block;
@@ -43,18 +43,28 @@
     padding: 10px;
   }
   
-  .carousel {
+  .carrusel {
+    margin-top: 100px;
     position: relative;
-    width: 368px;
+    width: 680px;
     padding: 10px 40px;
     border: 1px solid #CCC;
     border-radius: 15px;
     background: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #carruselContainer{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   
   .carousel img {
-    width: 300px;
-    height: 160px;
+    width: 680px;
+    height: 384px;
     /* make it block to remove space around images */
     display: block;
   }
@@ -90,12 +100,14 @@
   }
   
   .gallery {
-    width: 390px;
+    
+    width: 600px;
     overflow: hidden;
+    
   }
   
   .gallery ul {
-    height: 130px;
+    height: 384px;
     width: 9999px;
     margin: 0;
     padding: 0;
@@ -108,4 +120,8 @@
   
   .gallery li {
     display: inline-block;
+  }
+
+  .slide {
+    width: 600px;
   }
