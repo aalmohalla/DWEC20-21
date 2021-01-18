@@ -1,0 +1,184 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+body {
+  font-family:Montserrat;
+}
+
+audio {
+  display:none;
+  
+}
+
+#start {
+  display:block;
+  width:400px;
+  height:350px;
+  text-align:center;
+  position:relative;
+  margin:0 auto;
+  font-size:105px;
+  color:#ffffff;
+  padding-top:95px;
+  
+    
+  
+}
+#start:hover {
+  cursor:pointer;
+}
+
+#fail {
+  display:block;
+  width:400px;
+  height:350px;
+  text-align:center;
+  position:relative;
+  margin:0 auto;
+  font-size:105px;
+  color:#ffffff;
+  padding-top:95px;
+  display:none;
+  
+    
+  
+}
+
+#fail span {
+  font-size:50px;
+}
+
+#fail:hover {
+  cursor:pointer;
+}
+
+#created {
+  position:fixed;
+  right:30px;
+  bottom:20px
+}
+
+.blur {
+  filter: blur(5px); /* Doesn't work anywhere yet */
+  -webkit-filter: blur(5px);
+}
+
+#container {
+  width:450px;
+  position:relative;
+  margin:0 auto;
+}
+
+#count {
+  position:absolute;
+  top:200px;
+  left:183px;
+  font-size:40px;
+  color:#FFFFFF;
+  width:80px;
+  text-align:center;
+  
+}
+
+#simon {
+    position: relative;
+}
+#simon #first{
+    position: absolute;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    line-height: 0;
+    border: 224.99999999999997px solid #222222;
+    border-radius: 224.99999999999997px;
+    left: 0px;
+    top: 0px;
+}
+
+/*#1aff00*/
+#green{
+    position: absolute;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    line-height: 0;
+    border: 182.14285714285714px solid;
+    border-bottom: none;
+    border-right: none;
+    border-top-left-radius: 182.14285714285714px;
+    left: 32.14285714285714px;
+    top: 32.14285714285714px;
+    border-color:#0b7000;
+}
+
+#green.click{
+    border-color:#1aff00;
+}
+
+
+/*#ff0b00*/
+#red {
+    position: absolute;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    line-height: 0;
+    border: 182.14285714285714px solid;
+    border-color: #c30800;
+    border-bottom: none;
+    border-left: none;
+    border-top-right-radius: 182.14285714285714px;
+    left: 235.7142857142857px;
+    top: 32.14285714285714px;
+}
+#red.click{
+    border-color:#ff0b00;
+}
+/*#ffec00*/
+#yellow {
+    position: absolute;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    line-height: 0;
+    border: 182.14285714285714px solid;
+    border-color:#c3b400;
+    border-top: none;
+    border-right: none;
+    border-bottom-left-radius: 182.14285714285714px;
+    left: 32.14285714285714px;
+    top: 235.7142857142857px;
+}
+#yellow.click{
+    border-color: #ffec00;
+}
+
+/*#29abd0*/
+#blue {
+    position: absolute;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    line-height: 0;
+    border: 182.14285714285714px solid;
+    border-color:#196d85;
+    border-top: none;
+    border-left: none;
+    border-bottom-right-radius: 182.14285714285714px;
+    left: 235.7142857142857px;
+    top: 235.7142857142857px;
+}
+
+#blue.click {
+    border-color: #29abd0;
+}
+#simon #sixth {
+    position: absolute;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    line-height: 0;
+    border: 53.57142857142857px solid #222222;
+    border-radius: 53.57142857142857px;
+    left: 171.42857142857142px;
+    top: 171.42857142857142px;
+}

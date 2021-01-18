@@ -1,0 +1,132 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway|Varela+Round|Coda);
+
+body {
+  background: #ecf0f1;
+  padding: 2.23em;
+}
+
+.title {
+  color: #2c3e50;
+  font-family: "Coda", sans-serif;
+  text-align: center;
+}
+.title2 {
+  color: #2c3e50;
+  font-family: "Coda", sans-serif;
+  text-align: center;
+  font-size: medium;
+}
+.user-profile {
+  margin: auto;
+  width: 40em; 
+  height: 20em;
+  background: #fff;
+  border-radius: .3em;
+  justify-content: center;
+  transition: width height 0.6s;
+}
+
+.user-profile  #fullname {
+  color: #16a085;
+  font-size: 1.53em;
+  font-family: "Coda", sans-serif;
+  font-weight: bold;
+  text-align: center;
+}
+
+#username {
+  margin: auto;
+  display: inline-block;
+  margin-left: 10.43em;
+  color: #3498db;
+  font-size: .87em;
+  font-family: "varela round", sans-serif;
+}
+
+.user-profile > .description {
+  margin: auto;
+  margin-top: 1.35em;
+  margin-right: 3em;
+  width: 18em;
+  color: #7f8c8d;
+  font-size: .87em;
+  font-family: "varela round", sans-serif;
+}
+
+.user-profile > img#avatar {
+	padding: .7em;
+  margin-left: .3em;
+  margin-top: .3em;
+  height: 6.23em;
+  width: 6.23em;
+  border-radius: 18em;
+}
+
+
+.footer {
+  margin: 2em auto;
+  height: 3.70em;
+  background: #16a085;
+  text-align: center;
+  border-radius: 0 0 .3em .3em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+}
+
+button {
+  color: white;
+  font-family: "Coda", sans-serif;
+  text-align: center;
+  font-size: 20px;
+  background: none;
+  outline: none;
+  border: 0;
+}
+ 
+#imagen {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+#avatar {
+    margin-top: 20px;
+    width: 200px;
+    border-radius: 50%;
+    transition: opacity 0.6s;
+}
+
+.avatar-active{
+    opacity: 0.4;
+    transition: 0.6s;
+}
+
+.material-icons.info{
+    font-size: 50px;
+    margin: 8px;
+    opacity: 0.3;
+    transition: 0.6s;
+}
+
+.material-icons.info:hover {
+    font-size : 80px;
+    opacity: 1;
+    transition: 0.6s;
+}
+
+.material-icons.refresh-image {
+    position: absolute;
+    font-size: 50px;
+    margin: 8px;
+    opacity: 0;
+    transition: opacity font-size 0.6s;
+      
+}
+
+.material-icons.refreshImage-active {
+    opacity: 0.6;
+    font-size : 80px;
+    transition: 0.6s;
+  
+}
