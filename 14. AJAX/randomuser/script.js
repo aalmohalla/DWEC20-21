@@ -7,7 +7,8 @@ let imagenContainer = document.querySelector("#imagen");
 let loader = document.querySelector(".loader");
 let loading = false;
 let loadTry = 1;
-let user = {};
+let user = {}; //estructura de datos de usuario mostrado en la vista, los campos se deben llamar igual a los
+// data-set configurados en html
 
 imagenContainer.addEventListener("mouseover",(e)=>{
     if (!loading && (e.target.tagName == "IMG" || e.target.tagName == "I") ) {
@@ -27,8 +28,8 @@ imagenContainer.addEventListener("mouseout",()=>{
 imagen.addEventListener("click",(e)=>{
     if (e.target.tagName == "IMG" || e.target.tagName == "I" ) {
         loading = true;
-        dataRefresh();
         refreshButton.classList.remove("refreshImage-active");
+        dataRefresh();
     }
 });
 
@@ -44,6 +45,7 @@ function dataRefresh(){
         dataUpdate(datos);
     })
     .catch(() => {
+        //3 reintentos de carga, para cada uno incrementamos el tiempo de espera en el reintento
         if(loadTry < 4){
         setTimeout(dataRefresh,loadTry*1000)
         } else{
@@ -56,6 +58,7 @@ function dataRefresh(){
     });
 }
 
+// refresca los datos del objeto user con los del usuario aleatorio cargado. Actualiza la imagen
 function dataUpdate(datos){
     console.dir(datos);
     let data = datos.results[0];
