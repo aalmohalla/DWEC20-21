@@ -46,8 +46,8 @@ function dataRefresh(){
     })
     .catch(() => {
         //3 reintentos de carga, para cada uno incrementamos el tiempo de espera en el reintento
-        if(loadTry < 4){
-        setTimeout(dataRefresh,loadTry*1000)
+        if(loadTry++ < 4){
+        setTimeout(dataRefresh,loadTry*1000);
         } else{
             alert("error de carga");
         }
@@ -82,3 +82,5 @@ document.querySelector(".footer").addEventListener("mouseover", (event)=>{
         document.getElementById("fullname").textContent = user[target.dataset.fieldName];
     }
 });
+
+dataRefresh();
